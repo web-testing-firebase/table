@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h4 class="modal-title">My Form</h4>
+    <button type="button" class="close" aria-label="Close"
+     (click)="activeModal.dismiss('Cross click')">
+    </button>
+  </div>
+  <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <div class="modal-boy">
+      <div class="container">
+       <div class="form-group">
+          <select class="custom-select" formControlName="keywords">
+            <option>Keywords 1</option>
+            <option>Keywords 2</option>
+            <option>Keywords 3</option>
+            <option>Keywords 4</option>
+            <option>Keywords 5</option>
+          </select>
+       </div>
+      </div>
+    </div>
+    <div class="modal-footer ">
+      
+        <div class="col-sm-12 mb-4 text-center"> 
+      <button class="btn btn-success"
+        [disabled]="!myForm.valid">
+        Save
+      </button>
+      </div>
+    </div>
+  </form>

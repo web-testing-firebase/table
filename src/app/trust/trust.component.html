@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="card-header">Form</div>
+  <div class="card-body">
+ <form [formGroup]="myForm"(ngSubmit)="onSubmit()">
+<!--      <div formArrayName="hobbies">
+          <h4>Your Hobbies</h4>
+          <button
+          class="btn btn-default"
+          type="button"
+          (click)="onAddHobby()">Add Hobby</button>
+
+      <div
+        class="form-group"
+        *ngFor="let hobbyControl of myForm.get('hobbies').controls; let i = index " >
+        <input type="text" class="form-control" [formControlName]="i" >
+        <input type="text" class="form-control" [formControlName]="i" >
+        <input type="text" class="form-control" [formControlName]="i" >
+        
+        <div *ngIf="myForm.get('hobbies').length>1">
+                  <button class="btn btn-primary" (click)="Remove()">Remove</button>
+        </div>
+      </div> -->
+      <div formArrayName="aliases">
+       <button (click)="addAlias()">Add Alias</button>
+        
+          <div *ngFor="let address of aliases.controls; let i=index">
+            <!-- The repeated alias template -->
+            <label>
+              Alias:
+              <input type="text" [formControlName]="i">
+            </label>
+            <label>
+                alien:
+                <input type="text" [formControlName]="i">
+              </label>
+              <label>
+                  ads:
+                  <input type="text" [formControlName]="i">
+                </label>
+  
+            <button class="btn btn-primary" (click)="remove(i)">Remove</button>
+          </div>
+        </div>  
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

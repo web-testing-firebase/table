@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add New Contact</h4>
+    <button type="button"
+     (click)="activeModal.dismiss('Cross click')" class="close">
+    </button>
+  </div>
+<div class="modal-body">
+  <a class="space" routerLink="Individual" (click)="activeModal.dismiss('Close clicked')">Individual</a>
+  <a class="space" routerLink="Business" (click)="activeModal.dismiss('Close clicked')">Business</a>
+  <a class="space" routerLink="Trust" (click)="activeModal.dismiss('Close clicked')">Trust</a>
+  <a class="space" routerLink="Association"(click)="activeModal.dismiss('Close clicked')">Association</a>
+  <a class="space" routerLink="Union" (click)="activeModal.dismiss('Close clicked')">Union</a>
+</div>

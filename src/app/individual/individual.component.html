@@ -1,0 +1,777 @@
+<div class="content-body">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="card">
+      <div class="card-header head">New Individual</div>
+      <div class="card-body">
+        <div class="form-row">
+          <div class="form-group col-sm-2 md-2 xl-2">
+            <label for="saluatation">Salutation</label>
+            <select class="custom-select" id="saluatation" name="Salutation" formControlName="Salutation" required>
+              <option>Dr.</option>
+              <option>Mr.</option>
+              <option>Mrs.</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-3 md-2 xl-2">
+            <label for="first">First Name</label>
+            <input type="text" id="first" name="first" placeholder="First name" formControlName="first"
+              class="form-control" maxlength="10">
+          </div>
+          <div class="form-group col-sm-2 col-md-2 xl-3">
+            <label for="middle">Middle Name</label>
+            <input type="text" id="middle" name="middle" placeholder="Middle name" formControlName="middle"
+              class="form-control" required>
+          </div>
+          <div class="form-group col-sm-3 col-md-3 xl-3">
+            <label for="last">Last Name</label>
+            <input type="text" id="last" name="last" placeholder="Last name" formControlName="last" class="form-control"
+              required>
+          </div>
+          <div class="form-group col-md-2 xl-2">
+            <label for="suffix">Suffix</label>
+            <select class="custom-select " id="suffix" name="suffix" formControlName="suffix" required>
+              <option>II</option>
+              <option>III</option>
+              <option>IV</option>
+              <option>V</option>
+            </select>
+          </div>
+        </div>
+        <div class=form-row>
+          <div class="form-group col-sm-6 col-md-6 col-xl-6">
+            <label for="nick">Nickname</label>
+            <input type="text" id="nick" name="nick" placeholder="Nickname" formControlName="nick" class="form-control"
+              required>
+          </div>
+          <div class="form-group col-sm-6 col-md-6 col-xl-6">
+            <label for="design">Designation</label>
+            <input type="text" id="design" name="design" placeholder="M.D, Ph.D" formControlName="design"
+              class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group col-sm-6 col-md-6 col-xl-6">
+          <label for="job">Job Title</label>
+          <input type="text" id="job" name="job" placeholder="CEO, COO, CFO" fromControlName="job" class="form-control"
+            required>
+        </div>
+        <div class="form-group col-sm-6 col-md-6 col-xl-6">
+          <label for="emp">Employer</label>
+          <input type="text" id="emp" name="emp" formControlName="emp" class="form-control" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header head">Family</div>
+      <div class="card-body">
+
+        <div class="form-group col-sm-6 col-md-6 col-xl-6">
+          <label for="family">Familyname</label>
+          <input type="text" id="family" name="family" formControlName="family" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header  head">Spouse</div>
+      <div class="card-body">
+
+        <div class="form-row">
+          <div class="form-group col-sm-2  md-2 xl-2">
+            <label for="sal">Salutation</label>
+            <select class="custom-select" id="sal" name="sal" formControlName="sal">
+              <option>Dr.</option>
+              <option>Mr.</option>
+              <option>Mrs.</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3 col-sm-3 xl-2">
+            <label for="sp_first">First Name</label>
+            <input type="text" id="sp_first" name="sp_first" placeholder="First name" formControlName="sp_first"
+              class="form-control">
+          </div>
+          <div class="form-group col-md-2 col-sm-2 xl-3">
+            <label for="sp_middle">Middle Name</label>
+            <input type="text" id="sp_middle" name="sp_middle" placeholder="Middle name" formControlName="sp_middle"
+              class="form-control">
+          </div>
+          <div class="form-group col-md-3 xl-3 sm-3">
+            <label for="sp_last">Last Name</label>
+            <input type="text" id="sp_last" name="sp_last" placeholder="Last name" formControlName="sp_last"
+              class="form-control">
+          </div>
+          <div class="form-group col-md-2 xl-2 sm-3">
+            <label for="suf">Suffix</label>
+            <select class="custom-select " id="suf" name="suf" formControlName="suf">
+              <option>II</option>
+              <option>III</option>
+              <option>IV</option>
+              <option>V</option>
+            </select>
+          </div>
+        </div>
+        <div class=form-row>
+          <div class="form-group col-sm-6">
+            <label for="sp_nick">Nickname</label>
+            <input type="text" id="sp_nick" name="sp_nick" placeholder="Nickname" formControlName="sp_nick"
+              class="form-control">
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="sp_design">Designation</label>
+            <input type="text" id="sp_design" name="sp_design" placeholder="M.D, Ph.D" formControlName="sp_design"
+              class="form-control">
+          </div>
+        </div>
+        <div class="form-group col-sm-6 col-md-6 col-xl-6">
+          <label for="sp_job">Job Title</label>
+          <input type="text" id="sp_job" name="sp_job" placeholder="CEO, COO, CFO" formControlName="sp_job"
+            class="form-control">
+        </div>
+        <div class="form-group col-sm-6 col-md-6 col-xl-6">
+          <label for="sp_emp">Employer</label>
+          <input type="text" id="sp_emp" name="sp_emp" formControlName="sp_emp" class="form-control">
+        </div>
+      </div>
+    </div>
+    <!---Adress started-->
+    <div class="card">
+      <div class="card-header head">Addresses</div>
+      <div class="card-body">
+        <div formArrayName="add" class="form-group"
+          *ngFor="let addControl of signupForm.get('add').controls; let i = index">
+          <div [formGroupName]="i">
+            <div class="form-row">
+              <div class="form-group col-sm-4 mb-4"
+                [ngClass]="{'has-error':addControl.get('adres').invalid && addControl.get('adres').touched}">
+                <label [attr.for]="'adres'+i">Address Type</label>
+                <select class="custom-select" [id]="'adres'+i" class="form-control" name="adres" formControlName="adres"
+                  required>
+                  <option>Home</option>
+                  <option>Mailing</option>
+                  <option>Other</option>
+                  <option>Work</option>
+                </select>
+                <small class="help-block text-danger"
+                  *ngIf="addControl.get('adres').errors?.required && addControl.get('adres').touched">
+                  Address Type is Required..!
+                </small>
+              </div>
+
+              <div class="form-group col-sm-8 mb-8"
+                [ngClass]="{'has-error':addControl.get('cntry').invalid && addControl.get('cntry').touched}">
+
+                <label [attr.for]="'cntry'+i">Country:</label>
+                <select [id]="'cntry'+i" formControlName="cntry" [(ngModel)]="selectedCountry.id" (change)="onSelect($event.target.value)" required>
+                  <option value="0">--select--</option>
+                  <option *ngFor="let country of countries" value={{country.id}}>{{country.name}}</option>
+                </select>
+                <small class="help-block text-danger"
+                  *ngIf="addControl.get('cntry').errors?.required && addControl.get('cntry').touched">
+                  Country is Required..!
+                </small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group form-check col-sm-4 mb-4">
+                <input type="checkbox" class="form-check-input" id="primary">
+                <label class="form-check-label" for="primary">Is Primary ?</label>
+              </div>
+
+              <div class="form-group col-sm-8 mb-8"
+                [ngClass]="{'has-error':addControl.get('adrs').invalid && addControl.get('adrs').touched}">
+                <label [attr.for]="'adrs'+i">Address</label>
+                <input type="text" [id]="'adrs'+i" class="form-control" name="adrs" formControlName="adrs" required>
+                <small class="help-block text-danger"
+                  *ngIf="addControl.get('adrs').errors?.required && addControl.get('adrs').touched">
+                  Address is Required..!
+                </small>
+              </div>
+
+            </div>
+
+            <div class="form-row">
+              <div class="form-group form-check col-sm-4 mb-4">
+              </div>
+              <div class="form-group col-sm-8 mb-8"
+                [ngClass]="{'has-error':addControl.get('adress').invalid && addControl.get('adress').touched}">
+                <label [attr.for]="'adress'+i">Address line 2</label>
+                <input type="text" [id]="'adress'+i" class="form-control" name="adress" formControlName="adress"
+                  required>
+                <small class="text-danger"
+                  *ngIf="addControl.get('adress').errors?.required && addControl.get('adress').touched">
+                  Address is Required..!
+                </small>
+              </div>
+
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group col-sm-4 mb-4">
+
+              </div>
+
+              <div class="form-group col-sm-2 mb-2 xl-2 ls-2"
+                [ngClass]="{'has-error':addControl.get('city').invalid && addControl.get('city').touched}">
+                <label [attr.for]="'city'+i">City</label>
+
+                <input type="text" [id]="'city'+i" class="form-control" name="city" formControlName="city" required>
+                <small class="text-danger"
+                  *ngIf="addControl.get('city').errors?.required && addControl.get('city').touched">
+                  City is Required..!
+                </small>
+              </div>
+
+              <div class="form-group col-sm-3 mb-3 xl-3 ls-3"
+                [ngClass]="{'has-error':addControl.get('state').invalid && addControl.get('state').touched}">
+                <label [attr.for]="'state'+i">State</label>
+                <select [id]="'state'+i" formControlName="state" name="state" required>
+                  <option *ngIf='selectedCountry.id == 0' value="0">Select an state</option>
+                  <option *ngFor="let state of states" value={{state.id}}>{{state.name}}</option>
+                </select>
+                <small class="text-danger"
+                  *ngIf="addControl.get('state').errors?.required && addControl.get('state').touched">
+                  State is Required..!
+                </small>
+              </div>
+
+              <div class="form-group col-sm-3 mb-3 "
+                [ngClass]="{'has-error':addControl.get('code').invalid && addControl.get('code').touched}">
+                <label [attr.for]="'code'+i">Postal Code</label>
+                <input type="text" [id]="'code'+i" name="code" class="form-control" formControlName="code" maxlength="6"
+                  required>
+                <small class="form-text text-danger"
+                  *ngIf="addControl.get('code').touched && addControl.get('code').hasError('required')">This field is
+                  required!</small>
+                <small class="form-text text-dag"
+                  *ngIf="addControl.get('code').touched && phonenadd.get('code').hasError('invalidNumber')">Numbers
+                  accepted only!</small>
+
+              </div>
+
+              <div *ngIf="signupForm.get('add').length>1">
+                <button fill="clear" class="btn btn-pill btn-outline-danger btn-air-danger"
+                  (click)="remove(i)">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button fill="clear" class="btn btn-pill btn-outline-primary btn-air-primary" (click)="AddAnother()"> Add
+          Another
+          Phone</button>
+
+
+      </div>
+    </div>
+    <!---Adress Ended-->
+
+    <!--Phone Started-->
+    <div class="card">
+      <div class="card-header head">Phones</div>
+      <div class="card-body">
+        <div class="form-group ">
+          <div formArrayName="phnadd" *ngFor="let phonenadd of signupForm.get('phnadd').controls; let i = index">
+            <div [formGroupName]="i">
+              <div class="form-group">
+                <div class="form-row">
+
+                  <div class="form-group col-sm-4 mb-4"
+                    [ngClass]="{'has-error':phonenadd.get('adrs_type').invalid && phonenadd.get('adrs_type').touched}">
+                    <label [attr.for]="'adrs_type'+i"> Address Type</label>
+
+                    <select class="custom-select" [id]="'adrs_type'+i" name="adrs_type" formControlName="adrs_type"
+                      required>
+                      <option>Home</option>
+                      <option>Mailing</option>
+                      <option>Other</option>
+                      <option>Work</option>
+                    </select>
+
+                    <small class="text-danger"
+                      *ngIf="phonenadd.get('adrs_type').errors?.required && phonenadd.get('adrs_type').touched">
+                      Address Type is Required..!
+                    </small>
+
+                  </div>
+
+                  <div class="form-group col-sm-4 md-4 xl-4"
+                    [ngClass]="{'has-error':phonenadd.get('phnmbr').invalid && phonenadd.get('phnmbr').touched}">
+                    <label [attr.for]="'phnmbr'+i">Phone Numbers</label>
+                    <select class="custom-select" [id]="'phnmbr'+i" name="phnmbr" formControlName="phnmbr" required>
+                      <option>IN(+91)</option>
+                      <option>RS(+381)</option>
+                      <option>USA(+1)</option>
+                      <option>UA(+380)</option>
+                    </select>
+                    <small class="text-danger"
+                      *ngIf="phonenadd.get('phnmbr').errors?.required && phonenadd.get('phnmbr').touched">
+                      Phone Number is Required..!
+                    </small>
+                  </div>
+                  <div class="form-group"
+                    [ngClass]="{'has-error':phonenadd.get('fone').invalid && phonenadd.get('fone').touched}">
+                    <label [attr.for]="'fone'+i"> </label>
+                    <input type="text" [id]="'fone'+i" name="fone" class="form-control" formControlName="fone"
+                      placeholder="(201) 222-5432" pattern=" (^[0][1-9]+)|([1-9]\d*)" (keypress)="numberOnly($event)"
+                      maxlength="10" required>
+                    <small class="form-text text-danger"
+                      *ngIf="phonenadd.get('fone').touched && phonenadd.get('fone').hasError('required')">This field is
+                      required!</small>
+                    <small class="form-text text-danger"
+                      *ngIf="phonenadd.get('fone').touched && phonenadd.get('fone').hasError('pattern')">Numbers
+                      accepted only!</small>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group form-check col-sm-4 mb-4">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Is Primary ?</label>
+                  </div>
+
+                  <div class="form-group col-sm-4 mb-4"
+                    [ngClass]="{'has-error':phonenadd.get('area').invalid && phonenadd.get('area').touched}">
+                    <label [attr.for]="'area'+i">Extnesion</label>
+                    <input type="text" [id]="'area'+i" name="area" class="form-control" formControlName="area" required>
+                    <small class="text-danger"
+                      *ngIf="phonenadd.get('area').errors?.required && phonenadd.get('area').touched">
+                      Extension is Required..!
+                    </small>
+                  </div>
+                  <div class="form-group col-sm-4 mb-4"
+                    [ngClass]="{'has-error':phonenadd.get('speed').invalid && phonenadd.get('speed').touched}">
+                    <label [attr.for]="'speed'+i">speed dail</label>
+                    <input type="text" [id]="'speed'+i" name="speed" class="form-control" formControlName="speed"
+                      required>
+                    <small class="text-danger"
+                      *ngIf="phonenadd.get('speed').errors?.required && phonenadd.get('speed').touched">
+                      Dail Number is Required..!
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <!--Remove Code-->
+              <div *ngIf="signupForm.get('phnadd').length>1">
+                <button fill="clear" class="btn btn-pill btn-outline-danger btn-air-danger"
+                  (click)="removephone(i)">Remove</button>
+              </div>
+
+            </div>
+          </div>
+          <button fill="clear" class="btn btn-pill btn-outline-primary btn-air-primary" (click)="phones()"> Add Another
+            Phone</button>
+        </div>
+
+      </div>
+    </div>
+    <!---Phone Ended-->
+    <div class="card">
+      <div class="card-header head">Emails</div>
+      <div class="card-body">
+        <div formArrayName="email" *ngFor="let emails of signupForm.get('email').controls; let i = index">
+          <div [formGroupName]="i">
+            <div class="form-row">
+              <div class="form-group col-sm-4 mb-4"
+                [ngClass]="{'has-error':emails.get('email_type').invalid && emails.get('email_type').touched}">
+                <label [attr.for]="'email_type'+i">Email Type</label>
+                <select class="custom-select" [id]="'email_type'+i" name="email_type" formControlName="email_type">
+                  <option>Home</option>
+                  <option>Other</option>
+                  <option>Work</option>
+                </select>
+                <small class="text-danger"
+                  *ngIf="emails.get('email_type').errors?.required && emails.get('email_type').touched">
+                  Email Type is Required..!
+                </small>
+              </div>
+              <div class="form-group col-sm-8 mb-8" [ngClass]="{
+                'has-danger':emails.get('email_adres').invalid && emails.get('email_adres').dirty,
+                'has-success':emails.get('email_adres').valid && emails.get('email_adres').dirty}">
+                <!-- [class.has-error]="emails.get('email_adres').invalid && emails.get('email_adres').touched"> -->
+                <label [attr.for]="'email_adres'+i">Email Address</label>
+                <input type="email" [id]="'email_adres'+i" name="email_adres" formControlName="email_adres" required
+                  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control">
+
+                <!-- <span class="help-block"
+                  *ngIf="emails.get('email_adres').errors.required && emails.get('email_adres').touched">
+                  Email Adress is Required..!
+                </span>
+                <span class="help-block"
+                  *ngIf="emails.get('email_adres').errors.pattern && emails.get('email_adres').touched">
+                  Email is Invalid
+                </span>
+                 -->
+                <span class="form-control-feedback"
+                  *ngIf="emails.get('email_adres').errors && (emails.get('email_adres').dirty || emails.get('email_adres').touched)">
+                  <small class="text-danger" *ngIf="emails.get('email_adres').errors.required">Email is required</small>
+                  <small class="text-danger"
+                    *ngIf="emails.get('email_adres').errors.pattern && emails.get('email_adres').touched">Your emails
+                    is Invalid</small>
+                </span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group form-check col-sm-4 mb-4">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Is Primary ?</label>
+              </div>
+            </div>
+          </div>
+          <!--Remove Code-->
+          <div *ngIf="signupForm.get('email').length>1">
+            <button fill="clear" class="btn btn-pill btn-outline-danger btn-air-danger"
+              (click)="removeemail(i)">Remove</button>
+          </div>
+        </div>
+        <button fill="clear" class="btn btn-pill btn-outline-primary btn-air-primary" (click)="addemails()"> Add Another
+          Phone</button>
+      </div>
+    </div>
+
+    <!--Email code ended-->
+
+    <div class="card">
+      <div class="card-header head">Social Accounts</div>
+      <div class="card-body">
+        <div formArrayName="social" *ngFor="let socials of signupForm.get('social').controls; let i = index">
+          <div [formGroupName]="i">
+            <div class="form-row">
+              <div class="form-group col-sm-4 mb-4"
+                [ngClass]="{'has-error': socials.get('social_type').invalid && socials.get('social_type').touched}">
+                <label [attr.for]="'social_type'+i">Type</label>
+                <select class="custom-select" [id]="'social_type'+i" name="social_type" formControlName="social_type"
+                  required>
+                  <option>Facebook</option>
+                  <option>Twitter</option>
+                  <option>Linkedin</option>
+                  <option>Pintrest</option>
+                  <option>Youtube</option>
+                  <option>Website(Home)</option>
+                  <option>Webstie(Other)</option>
+                  <option>Website(Work)</option>
+                </select>
+                <small class="text-danger"
+                  *ngIf="socials.get('social_type').errors?.required && socials.get('social_type').touched">
+                  Social Accounts is Required..!
+                </small>
+              </div>
+              <div class="form-group col-sm-8 mb-8"
+                [ngClass]="{'has-error':socials.get('web_adrs').invalid && socials.get('web_adrs').touched}">
+                <label [attr.for]="'web_adrs'+i">Web Address</label>
+                <input type="text" [id]="'web_adrs'+i" name="web_adrs" formControlName="web_adrs" class="form-control"
+                  required>
+                <small class="text-danger"
+                  *ngIf="socials.get('web_adrs').errors?.required && socials.get('web_adrs').touched">
+                  Web Adress is Required..!
+                </small>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="signupForm.get('social').length>1">
+            <button fill="clear" class="btn btn-pill btn-outline-danger btn-air-danger"
+              (click)="remove_social(i)">Remove</button>
+          </div>
+        </div>
+        <button fill="clear" class="btn btn-pill btn-outline-primary btn-air-primary" (click)="social()">
+          Add Another Account
+        </button>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header head">Contact Details</div>
+      <div class="card-body">
+
+        <div class="form-row">
+          <div class="form-group col-sm-6 mb-6">
+            <label for="status">Status</label>
+            <select class="custom-select" [id]="'status'+i" name="status" formControlName="status">
+              <option>Client-Active</option>
+              <option>Client-Closed</option>
+              <option>Vendor-Active</option>
+              <option>Vendor-Closed</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-6 mb-6">
+            <label for="gender">Gender</label>
+            <select class="custom-select" id="gender" name="gender" formControlName="gender">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Unkown</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-sm-6 mb-6">
+            <label for="category">Category</label>
+            <select class="custom-select" id="category" name="category" formControlName="category">
+              <option>Client</option>
+              <option>Prospect</option>
+              <option>Insurance Company</option>
+              <option>Vendor</option>
+              <option>Custodian</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-6 mb-6">
+            <label for="taxid">Tax ID Number</label>
+            <input type="text" name="taxid" formControlName="taxid" placeholder="___-__-___" maxlength="10">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-sm-4 mb-4">
+            <label for="source">Source</label>
+            <select class="custom-select" id="sourcei" name="source" formControlName="source">
+              <option>401K Compant Employee</option>
+              <option>Cold Calling</option>
+              <option>Fishing</option>
+              <option>Flying</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-4 mb-4  ">
+            <label for="dob">Date of birth</label>
+            <br />
+            <div class="input-group">
+              <input placeholder="Date of Birth" ngbDatepicker #d="ngbDatepicker" id="dob" name="dob"
+                formControlName="dob">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i
+                    class="far fa-calendar-alt"></i></button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group form-check col-sm-4 mb-4">
+            <br />
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Enable Dob Reminder?</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-4 mb-4">
+            <label for="reffered">Reffered By</label>
+            <input type="text" id="reffered" name="reffered" placeholder="Refference" formControlName="reffered">
+          </div>
+          <div class="form-group col-sm-4 mb-4  ">
+            <label for="merit">Marital Status</label>
+            <select class="custom-select" id="merit" formControlName="merit">
+              <option>Divorced</option>
+              <option>life partner</option>
+              <option>Married</option>
+              <option>Seprated</option>
+              <option>Unknown</option>
+              <option>Windowed</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-4 mb-4 ">
+            <label for="date">Marital Anniversary</label>
+            <br />
+            <div class="input-group">
+              <input placeholder="Marital Date" ngbDatepicker #dd="ngbDatepicker" id="date" name="date"
+                formControlName="date">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="dd.toggle()" type="button"><i
+                    class="far fa-calendar-alt"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-4 mb-4">
+            <label>Servicing Advisor</label>
+            <select class="custom-select" formControlName="servicing">
+              <option>Advisor 1</option>
+              <option>Advisor 2</option>
+              <option>Advisor 3</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-4 mb-4">
+            <label for="client">Client Since</label>
+            <br />
+            <div class="input-group">
+              <input placeholder="Client Since" ngbDatepicker #ccd="ngbDatepicker" id="client" name="client"
+                formControlName="client">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="ccd.toggle()" type="button"><i
+                    class="far fa-calendar-alt"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-sm-4 mb-4">
+            <label for="clienttd">Client Terminate Date</label>
+            <br />
+            <div class="input-group">
+              <input placeholder="Client Terminate Date" ngbDatepicker #ttd="ngbDatepicker" id="clienttd"
+                name="clienttd" formControlName="clienttd">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="ttd.toggle()" type="button"><i
+                    class="far fa-calendar-alt"></i></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-8 mb-8">
+            <label for="writing">Writing Advisor</label>
+            <select class="custom-select" formControlName="writing">
+              <option>Advisor 1</option>
+              <option>Advisor 2</option>
+              <option>Advisor 3</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-4 mb-4">
+            <label for="dod">date of death</label>
+            <br />
+            <div class="input-group">
+              <input placeholder="Date of Death" ngbDatepicker #dod="ngbDatepicker" id="dod" name="dod"
+                formControlName="dod">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="dod.toggle()" type="button"><i
+                    class="far fa-calendar-alt"></i></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header head">Keywords & Tag Groups</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="header">
+              <div class="title"> Keywords
+                <div class="action">
+                  <button class="btn btn-air-primary btn-outline-primary" (click)="modal()">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="k-value-group">
+              <div class="kvalue badge badge-dark">
+                <span class="">Keyword 1</span>
+              </div>
+              <div class="kvalue badge badge-dark">
+                <span class="">Keyword 2</span>
+              </div>
+              <div class="kvalue badge badge-dark">
+                <span class="">Keyword 3</span>
+              </div>
+              <div class="kvalue badge badge-dark">
+                <span class="">Keyword 4</span>
+              </div>
+              <div class="kvalue badge badge-dark">
+                <span class="">Keyword 5</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-6">
+            <div class="header">
+              <div class="title"> Tags
+                <div class="action">
+                  <button class="btn btn-air-primary btn-outline-primary" (click)="tags()">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="k-value-group">
+              <div class="kvalue badge badge-dark">
+                <span class="">tag 1</span>
+              </div>
+              <div class="kvalue badge badge-dark">
+                <span class="">tag 2</span>
+              </div>
+              <div class="kvalue badge badge-dark">
+                <span class="">tag 3</span>
+              </div>
+              <div class="kvalue badge badge-dark">
+                <span class="">tag 4</span>
+              </div>
+              <div class="kvalue badge badge-dark">
+                <span class="">tag 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header head">Permissions & Roles</div>
+      <div class="card-body">
+        <div class="form-row">
+          <div class="form-group col-sm-6 mb-6">
+            <label for="permission">Permission to</label>
+            <select class="custom-select" formControlName="permission">
+              <option>Select Team</option>
+              <option></option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-6 mb-6">
+            <label for="advisory">Advisor</label>
+            <select class="custom-select" formControlName="advisory">
+              <option>Advisor 1</option>
+              <option>Advisor 2</option>
+              <option>Advisor 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-6 mb-6">
+
+          </div>
+
+          <div class="form-group col-sm-6 mb-6">
+            <label for="asso_advisor">Associate Advisor</label>
+            <select class="custom-select" formControlName="asso_advisor">
+              <option>Advisor 1</option>
+              <option>Advisor 2</option>
+              <option>Advisor 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-6 mb-6">
+
+          </div>
+
+          <div class="form-group col-sm-6 mb-6">
+            <label for="CSA_Advisor">CSA</label>
+            <select class="custom-select" id="CSA_Advisor" formControlName="CSA_Advisor">
+              <option>CSA 1</option>
+              <option>CSA 2</option>
+              <option>CSA 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div>{{ this.signupForm.value | json }}
+    </div>
+    <p>
+      Form Status: {{ this.signupForm.status }}
+    </p>
+    <div class="col-sm-12 mb-4 text-center">
+      <button class="btn btn-lg btn-outline-primary btn-air-primary btn-lg " type="submit"
+        [disabled]="!signupForm.valid">Save</button>
+    </div>
+  </form>
+</div>
